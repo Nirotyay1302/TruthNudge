@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:padding="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shareClaimText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Claim text"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/shareVerdictText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verdict"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/holo_green_dark"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/shareReasonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reason here"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+        <TextView
+            android:id="@+id/shareSourceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Source: N/A"
+            android:textSize="12sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="4dp"
+            android:autoLink="web"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

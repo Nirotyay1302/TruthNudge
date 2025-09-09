@@ -1,0 +1,91 @@
+
+[versions]
+agp = "8.13.0"
+kotlin = "2.0.21"
+# IMPORTANT: Update this to a Compose Compiler version compatible with Kotlin 2.0.21 and Compose BOM 2024.09.00
+# Example: "1.5.14" - check official documentation or Android Studio suggestions.
+kotlinComposeCompiler = "2.0.0"
+
+
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5" # This is androidx.test.ext:junit
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.6.1"
+activityCompose = "1.8.0"
+composeBom = "2024.09.00"
+appcompat = "1.7.1"
+material = "1.12.0"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+
+# Specific version for Room libraries
+roomVersion = "2.7.2" # You had roomCompilerProcessingTesting at this version
+
+# Version for Gemini AI Client
+geminiAiClientVer = "0.9.0" # You had generativeai at 0.7.0, but using 0.9.0 for gemini-ai-client from your gradle file
+
+playServicesAuth = "21.0.0"
+credentials = "1.5.0"
+# credentialsPlayServicesAuth uses the same version as 'credentials'
+
+googleid = "1.1.1"
+
+firebaseBom = "34.2.0" # Using a more recent Firebase BOM version, 32.7.4 caused resolve errors previously
+# Individual Firebase library versions (like auth, database, analytics, firestore) will be managed by this BOM
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# Compose
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# Room - Specific Aliases
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomVersion" }
+# REMOVE or RENAME: androidx-room-compiler-processing-testing if not specifically needed with that combined name
+
+# Gemini AI Client
+gemini-ai-client = { module = "com.google.ai.client.generativeai:generativeai", version.ref = "geminiAiClientVer" }
+# REMOVE: generativeai = { group = "(", name = "generativeai", version.ref = "generativeai" } # Incorrect and redundant
+
+# Google Play Services & Credentials
+play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
+androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentials" } # Uses 'credentials' version
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+
+# Firebase - Versions managed by BOM
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" } # Corrected group
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx" } # No version.ref, uses BOM
+firebase-analytics-ktx = { group = "com.google.firebase", name = "firebase-analytics-ktx" } # No version.ref, uses BOM
+firebase-database = { group = "com.google.firebase", name = "firebase-database-ktx" } # Use -ktx if available and desired, else 'firebase-database'. No version.ref, uses BOM
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx" } # No version.ref, uses BOM
+# REMOVE: firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" } # Redundant with BOM + KTX version
+# REMOVE: firebase-database (old versioned one if the one above is used)
+# REMOVE: firebaseAnalyticsKtx, firebaseAuthKtx, firebaseFirestoreKtx (old versioned ones, use BOM)
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinComposeCompiler" } # Uses dedicated compiler version
+

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "402660317337",
+    "project_id": "truthnudge-8bc28",
+    "storage_bucket": "truthnudge-8bc28.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402660317337:android:6afa308890f7f916660008",
+        "android_client_info": {
+          "package_name": "com.example.truthnudge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402660317337-hfcj13c952q0r7tdqkjvu0j6q0im4dab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.truthnudge",
+            "certificate_hash": "556074ebfed8b58b86bf6a0d0580f32dae8ac266"
+          }
+        },
+        {
+          "client_id": "402660317337-6np64dsbp3sukie1s4dl62f2tthkk2qf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA11qr8Ca7qdFszLUnI9y31wHm-Ljtd1bI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402660317337-6np64dsbp3sukie1s4dl62f2tthkk2qf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground"
+
+    android:padding="16dp">
+
+    <!-- Fact-check Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="?attr/colorSurface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Shared text -->
+            <TextView
+                android:id="@+id/receivedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sample_text"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="?attr/colorOnSurface"
+                android:paddingBottom="12dp" />
+
+            <!-- Verdict badge -->
+            <TextView
+                android:id="@+id/verdictText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verdict_placeholder"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="@drawable/verdict_badge"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/sourceLinks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sources will appear here"
+                android:textColor="@color/purple_700"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:autoLink="web"
+                android:linksClickable="true"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Nudge message -->
+    <TextView
+        android:id="@+id/nudgeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nudge_message"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:padding="16dp"
+        android:textColor="?attr/colorOnBackground"
+        android:gravity="center" />
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/shareAnywayButton"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_share_anyway"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+</LinearLayout>
