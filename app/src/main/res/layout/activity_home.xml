@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:openDrawer="start">
 
-    <!-- Main content area -->
+    <!-- Main content area (This part remains the same) -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -163,20 +163,36 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:paddingTop="8dp"
-                    android:nestedScrollingEnabled="false"/> <!-- Consider this if it's inside ScrollView and meant to be short -->
+                    android:nestedScrollingEnabled="false"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout> <!-- This LinearLayout (main content) closes here -->
 
-    <!-- Navigation drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
+    <!-- MODIFIED Navigation drawer content -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/drawer_header"
-        app:menu="@menu/drawer_menu"
-        app:itemIconTint="?attr/colorPrimary"
-        app:itemTextColor="?attr/colorOnSurface"/>
+        android:orientation="vertical"
+        android:background="?attr/colorSurface">
+
+        <!-- Your existing drawer header -->
+        <include layout="@layout/drawer_header"/>
+
+        <!-- NavigationView for the main menu items -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:headerLayout="@null"
+            app:menu="@menu/drawer_menu"
+            app:itemIconTint="?attr/colorPrimary"
+            app:itemTextColor="?attr/colorOnSurface"/>
+
+        <!-- "Contact App Developers" Section - This is the new include -->
+        <include layout="@layout/layout_drawer_connect_developers"/>
+
+    </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

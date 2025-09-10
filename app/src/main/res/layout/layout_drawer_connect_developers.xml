@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp"
+    android:gravity="center_horizontal"> <!-- Center the buttons if their width is wrap_content -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact App Developers"
+        android:textAppearance="?attr/textAppearanceTitleSmall"
+        android:layout_marginBottom="16dp"
+        android:textColor="?attr/colorOnSurface" />
+
+    <Button
+        android:id="@+id/btn_linkedin_dev1"
+        style="@style/LinkedInFollowButton"
+        android:text="Follow Nirotyay Mukherjee on LinkedIn" />
+    <!-- You can try a Unicode character like 🔗 (link) or 👤 (person) before the text:
+         android:text="🔗 Follow Developer 1 on LinkedIn"
+         However, appearance can vary.
+    -->
+
+    <Button
+        android:id="@+id/btn_linkedin_dev2"
+        style="@style/LinkedInFollowButton"
+        android:layout_marginTop="12dp"
+        android:text="Follow Salmali Samanta on LinkedIn" />
+
+</LinearLayout>

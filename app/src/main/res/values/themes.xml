@@ -1,40 +1,135 @@
-        <resources xmlns:tools="http://schemas.android.com/tools">
-            <!-- Base application theme. -->
-            <style name="Theme.TruthNudge" parent="Theme.Material3.Light.NoActionBar">
-                <!-- Primary brand color. -->
-                <item name="colorPrimary">@color/md_theme_light_primary</item>
-                <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
-                <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
-                <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
-                <!-- Secondary brand color. -->
-                <item name="colorSecondary">@color/md_theme_light_secondary</item>
-                <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
-                <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
-                <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
-                <!-- Tertiary brand color. -->
-                <item name="colorTertiary">@color/md_theme_light_tertiary</item>
-                <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
-                <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
-                <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
-                <!-- Error color. -->
-                <item name="colorError">@color/md_theme_light_error</item>
-                <item name="colorOnError">@color/md_theme_light_onError</item>
-                <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
-                <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
-                <!-- Background and Surface colors. -->
-                <item name="android:colorBackground">@color/md_theme_light_background</item>
-                <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
-                <item name="colorSurface">@color/md_theme_light_surface</item>
-                <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
-                <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
-                <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
-                <!-- Outline color -->
-                <item name="colorOutline">@color/md_theme_light_outline</item>
-                <!-- Inverse colors -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TruthNudge" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
+        <!-- Error color. -->
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+        <!-- Background and Surface colors. -->
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <!-- Outline color -->
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <!-- Inverse colors -->
 
-                <!-- Status bar color. -->
-                <item name="android:statusBarColor">?attr/colorPrimaryVariant</item> <!-- Or ?attr/colorSurface if you prefer -->
-                <!-- Customize your theme here. -->
-            </style>
-        </resources>
-        
+        <!-- Default Status bar color for the app. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- Default Navigation bar color (optional, for edge-to-edge) -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- Enable edge-to-edge display by default -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- Theme for general Full Screen Activities (if needed, without specific purple) -->
+    <style name="Theme.TruthNudge.FullScreen" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <!-- For this generic fullscreen, assume light background and dark icons -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <!-- Full Screen Low Contrast Purple Theme -->
+    <style name="Theme.TruthNudge.FullScreen.Purple" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Core Full Screen Attributes -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+
+        <!-- Low Contrast Purple Color Palette from colors.xml -->
+        <item name="colorPrimary">@color/lc_purple_primary</item>
+        <item name="colorOnPrimary">@color/lc_purple_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/lc_purple_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/lc_purple_onPrimaryContainer</item>
+
+        <item name="colorSurface">@color/lc_purple_surface</item>
+        <item name="colorOnSurface">@color/lc_purple_onSurface</item>
+        <item name="android:colorBackground">@color/lc_purple_background</item>
+        <item name="colorOnBackground">@color/lc_purple_onBackground</item>
+
+        <!-- Theming other colors to fit the purple scheme or be less prominent -->
+        <!-- You can adjust these if you want other accent colors -->
+        <item name="colorSecondary">@color/lc_purple_primary</item>
+        <item name="colorOnSecondary">@color/lc_purple_onPrimary</item>
+        <item name="colorSecondaryContainer">@color/lc_purple_primaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/lc_purple_onPrimaryContainer</item>
+
+        <item name="colorTertiary">@color/lc_purple_primary</item>
+        <item name="colorOnTertiary">@color/lc_purple_onPrimary</item>
+        <item name="colorTertiaryContainer">@color/lc_purple_primaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/lc_purple_onPrimaryContainer</item>
+
+        <!-- Keep error colors distinct for visibility -->
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+
+        <item name="colorSurfaceVariant">@color/lc_purple_surface</item> <!-- Or a slightly different shade like lc_purple_primaryContainer -->
+        <item name="colorOnSurfaceVariant">@color/lc_purple_onSurface</item>
+        <item name="colorOutline">@color/lc_purple_outline</item>
+
+        <!-- IMPORTANT: Adjust status bar icon color based on your lc_purple_background -->
+        <!-- If lc_purple_background (#F3E5F5) is light, status bar icons should be dark. -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+    <!-- ... other styles ... -->
+    <style name="LinkedInFollowButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">wrap_content</item> <!-- Adjust as needed, e.g., 200dp -->
+        <item name="android:layout_height">wrap_content
+        </item> <!-- Adjust as needed, e.g., 40dp for better touch target -->
+        <item name="android:backgroundTint">@color/linkedin_blue</item>
+        <item name="android:textColor">@color/linkedin_white_text</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif
+        </item> <!-- "SF Pro Text" is not standard on Android. sans-serif is a safe default. -->
+        <!-- For custom fonts, you'd need to add them to res/font -->
+        <item name="cornerRadius">16dp</item> <!-- MaterialComponents Button uses cornerRadius -->
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">180dp</item> <!-- To give it some width -->
+    </style>
+
+</resources>

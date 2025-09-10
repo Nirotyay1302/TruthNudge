@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.truthnudge">
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+    <uses-permission
+        android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
-
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:name=".YourApplicationClass"
         android:theme="@style/Theme.TruthNudge"
-        tools:ignore="MissingClass">
+        tools:ignore="MissingClass">  <!-- tools:ignore is an attribute of the application tag -->
 
         <service
             android:name=".LinkNotificationListener"
@@ -31,16 +31,19 @@
             </intent-filter>
         </service>
 
-
-        <activity android:name=".LoginActivity" android:exported="true">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TruthNudge.FullScreen.Purple">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity" android:exported="false"/>
-
-
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TruthNudge.FullScreen.Purple" />
 
         <activity
             android:name=".HistoryActivity"
@@ -48,12 +51,13 @@
 
         <activity
             android:name=".HomeActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:theme="@style/Theme.TruthNudge.FullScreen.Purple" />
+
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
+
         <activity
             android:name=".ShareReceiverActivity"
             android:exported="true">
@@ -76,7 +80,6 @@
                 <data android:scheme="https" />
             </intent-filter>
         </activity>
-
 
         <receiver
             android:name=".TruthNudgeWidget"

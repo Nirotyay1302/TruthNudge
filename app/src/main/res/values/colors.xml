@@ -8,7 +8,7 @@
     <color name="brand_on_secondary">#000000</color> <!-- Text/icons on secondary -->
 
     <!-- Logo Specific Colors -->
-    <color name="logo_purple">#6A0DAD</color> <!-- !!! REPLACE with your actual logo's purple hex code !!! -->
+    <color name="logo_purple">#6A0DAD</color> <!-- Your actual logo's purple hex code -->
     <color name="logo_purple_text_on">#FFFFFF</color><!-- White text for good contrast on the purple -->
     <color name="logo_purple_text_on_variant">#F0F0F0</color> <!-- A slightly off-white for secondary text -->
 
@@ -19,7 +19,7 @@
     <color name="verdict_false">#F44336</color>
     <color name="verdict_unknown">#FFC107</color>
 
-    <!-- Material 3 Theme Colors (Light) -->
+    <!-- Material 3 Theme Colors (Light) - Your existing definitions -->
     <color name="md_theme_light_primary">@color/brand_primary</color>
     <color name="md_theme_light_onPrimary">@color/brand_on_primary</color>
     <color name="md_theme_light_primaryContainer">#C8E6C9</color>
@@ -36,10 +36,10 @@
     <color name="md_theme_light_onError">#FFFFFF</color>
     <color name="md_theme_light_errorContainer">#FDECEA</color>
     <color name="md_theme_light_onErrorContainer">#B00020</color>
-    <color name="md_theme_light_background">#FFFBFE</color> <!-- Standard M3 light background -->
-    <color name="md_theme_light_onBackground">#1C1B1F</color> <!-- Standard M3 text on light background -->
-    <color name="md_theme_light_surface">#FFFBFE</color> <!-- Standard M3 light surface (for cards, toolbars etc.) -->
-    <color name="md_theme_light_onSurface">#1C1B1F</color> <!-- Standard M3 text on light surface -->
+    <color name="md_theme_light_background">#FFFBFE</color>
+    <color name="md_theme_light_onBackground">#1C1B1F</color>
+    <color name="md_theme_light_surface">#FFFBFE</color>
+    <color name="md_theme_light_onSurface">#1C1B1F</color>
     <color name="md_theme_light_surfaceVariant">#E7E0EC</color>
     <color name="md_theme_light_onSurfaceVariant">#49454F</color>
     <color name="md_theme_light_outline">#79747E</color>
@@ -48,7 +48,7 @@
     <color name="md_theme_light_inversePrimary">#ADC6FF</color>
     <color name="md_theme_light_surfaceTint">@color/md_theme_light_primary</color>
 
-    <!-- Base Definitions for Dark Theme Colors -->
+    <!-- Base Definitions for Dark Theme Colors - Your existing definitions -->
     <color name="md_theme_dark_primary">@color/md_theme_light_primary</color>
     <color name="md_theme_dark_onPrimary">@color/md_theme_light_onPrimary</color>
     <color name="md_theme_dark_primaryContainer">@color/md_theme_light_primaryContainer</color>
@@ -67,8 +67,8 @@
     <color name="md_theme_dark_onErrorContainer">@color/md_theme_light_onErrorContainer</color>
     <color name="md_theme_dark_background">#121212</color>
     <color name="md_theme_dark_onBackground">#E0E0E0</color>
-    <color name="md_theme_dark_surface">#1E1E1E</color> <!-- Standard M3 dark surface (for cards, toolbars etc.) -->
-    <color name="md_theme_dark_onSurface">#E0E0E0</color> <!-- Standard M3 text on dark surface -->
+    <color name="md_theme_dark_surface">#1E1E1E</color>
+    <color name="md_theme_dark_onSurface">#E0E0E0</color>
     <color name="md_theme_dark_surfaceVariant">#424242</color>
     <color name="md_theme_dark_onSurfaceVariant">#BDBDBD</color>
     <color name="md_theme_dark_outline">#757575</color>
@@ -77,6 +77,33 @@
     <color name="md_theme_dark_inversePrimary">@color/md_theme_light_primary</color>
     <color name="md_theme_dark_surfaceTint">@color/md_theme_dark_primary</color>
 
-    <color name="purple_700">#FF3700B3</color>
-    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color> <!-- This is a very dark purple -->
+    <color name="purple_500">#FF6200EE</color> <!-- This is a vibrant purple -->
+
+
+    <!-- Low Contrast Purple Theme Colors (Based on logo_purple) -->
+    <!-- Primary will be your logo purple -->
+    <color name="lc_purple_primary">@color/logo_purple</color> <!-- #6A0DAD -->
+    <color name="lc_purple_onPrimary">@color/logo_purple_text_on</color> <!-- #FFFFFF -->
+
+    <!-- Lighter purple for surfaces/backgrounds for a "low contrast" feel -->
+    <!-- You MUST adjust these and test contrast. These are examples. -->
+    <color name="lc_purple_surface">#F3E5F5</color>  <!-- Example: A very light lavender / Purple 50 -->
+    <color name="lc_purple_background">#F3E5F5</color> <!-- Can be same as surface or slightly different -->
+
+    <!-- Text color on the light purple surface/background - needs good contrast! -->
+    <!-- This will likely need to be a darker purple or a dark neutral gray -->
+    <color name="lc_purple_onSurface">#4A148C</color> <!-- Example: A darker purple / Purple 900 -->
+    <color name="lc_purple_onBackground">#4A148C</color> <!-- Example: A darker purple / Purple 900 -->
+
+    <!-- Container color - can be a step between primary and surface -->
+    <color name="lc_purple_primaryContainer">#CE93D8</color> <!-- Example: A mid-light purple / Purple 200 -->
+    <color name="lc_purple_onPrimaryContainer">#311B92</color> <!-- Example: Dark purple text on container / Purple 900 -->
+
+    <!-- Optional: variants if needed for secondary/tertiary, or outlines -->
+    <color name="lc_purple_outline">#AB47BC</color> <!-- Example: A mid-purple for outlines / Purple 300 or 400 -->
+    <!-- ... other colors ... -->
+    <color name="linkedin_blue">#0A66C2</color>
+    <color name="linkedin_white_text">#FFFFFF</color>
 </resources>
+
