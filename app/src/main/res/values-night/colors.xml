@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><!-- Material 3 Theme Colors (Dark) -->
+    <color name="md_theme_dark_primary">#A5D6A7</color> <!-- Lighter green for dark theme -->
+    <color name="md_theme_dark_onPrimary">#1B5E20</color> <!-- Dark text on light green -->
+    <color name="md_theme_dark_primaryContainer">#388E3C</color> <!-- Your darker green -->
+    <color name="md_theme_dark_onPrimaryContainer">#C8E6C9</color>
+    <color name="md_theme_dark_secondary">#FFCC80</color> <!-- Lighter yellow/orange for dark theme -->
+    <color name="md_theme_dark_onSecondary">#795548</color>
+    <color name="md_theme_dark_secondaryContainer">#FFAB40</color>
+    <color name="md_theme_dark_onSecondaryContainer">#4E342E</color>
+    <color name="md_theme_dark_tertiary">#81D4FA</color> <!-- Example -->
+    <color name="md_theme_dark_onTertiary">#01579B</color>
+    <color name="md_theme_dark_tertiaryContainer">#0277BD</color>
+    <color name="md_theme_dark_onTertiaryContainer">#B3E5FC</color>
+    <color name="md_theme_dark_error">#CF6679</color>
+    <color name="md_theme_dark_onError">#000000</color>
+    <color name="md_theme_dark_errorContainer">#B00020</color>
+    <color name="md_theme_dark_onErrorContainer">#FDECEA</color>
+    <color name="md_theme_dark_background">#121212</color> <!-- Standard dark background -->
+    <color name="md_theme_dark_onBackground">#E0E0E0</color> <!-- Light text on dark background -->
+    <color name="md_theme_dark_surface">#1E1E1E</color> <!-- Slightly lighter than background for surfaces -->
+    <color name="md_theme_dark_onSurface">#E0E0E0</color>
+    <color name="md_theme_dark_surfaceVariant">#424242</color>
+    <color name="md_theme_dark_onSurfaceVariant">#BDBDBD</color>
+    <color name="md_theme_dark_outline">#757575</color>
+    <color name="md_theme_dark_inverseSurface">#E0E0E0</color>
+    <color name="md_theme_dark_inverseOnSurface">#121212</color>
+    <color name="md_theme_dark_inversePrimary">#388E3C</color> <!-- Example -->
+    <color name="md_theme_dark_surfaceTint">@color/md_theme_dark_primary</color>
+</resources>

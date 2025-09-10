@@ -1,69 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="4dp">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/logo_purple"
+    android:padding="24dp">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:gravity="center"
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/ivAppLogoSignup"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/truthnudge_logo"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/app_logo_description"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        style="@style/TextAppearance.Material3.HeadlineSmall"
+        android:textColor="@color/logo_purple_text_on"
+        android:layout_marginBottom="24dp"/>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="?attr/dividerHorizontal"
-        android:showDividers="middle"
-        android:spacing="16dp">
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
 
-        <!-- Email -->
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etEmail"
-                android:inputType="textEmailAddress"
+            android:padding="20dp">
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:hintTextColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Password -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etPassword"
-                android:inputType="textPassword"
+            <!-- Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                app:hintTextColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Signup Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign up"/>
+            <!-- Confirm Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                app:hintTextColor="?attr/colorOnSurfaceVariant"
+                android:layout_marginBottom="24dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmPassword"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Progress Indicator -->
-        <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:id="@+id/progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:indicatorSize="32dp"
-            style="?attr/circularProgressIndicatorStyle"/>
+            <!-- Signup Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignup"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:layout_marginBottom="8dp"/>
 
-        <!-- Already have account? -->
-        <TextView
-            android:id="@+id/tvGoLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already have an account? Login"
-            android:textAppearance="?attr/textAppearanceBodyMedium"
-            android:paddingTop="12dp"/>
-    </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+            <!-- Progress Indicator -->
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:indicatorSize="32dp"
+                app:indicatorColor="?attr/colorPrimary"
+                style="?attr/circularProgressIndicatorStyle"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Already have account? -->
+            <TextView
+                android:id="@+id/tvGoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Already have an account? Login"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorPrimary" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+

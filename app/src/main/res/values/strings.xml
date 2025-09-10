@@ -5,10 +5,19 @@
     <string name="nudge_message">Think twice before sharing unverified claims 🚫</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_share_anyway">Share Anyway</string>
-    <string name="default_web_client_id">919005368631-hn0akdt45l3si5s9opifjkl5o79tubcs.apps.googleusercontent.com</string>
+    <string name="default_web_client_id">402660317337-6np64dsbp3sukie1s4dl62f2tthkk2qf.apps.googleusercontent.com</string>
     <string name="btn_login">Login</string>
     <string name="btn_signup">Sign up</string>
     <string name="btn_google">Continue with Google</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="app_logo_description">App Logo</string>
+    <string name="welcome_message">Welcome to TruthNudge!</string>
+    <string name="check_claim_label">Check Claim</string>
+    <string name="history_label">History</string>
+    <string name="recent_claims_label">Recent Claims</string>
+    <string name="content_desc_app_logo">TruthNudge App Logo</string>
+    <string name="content_desc_check_claim">Icon for Check Claim action</string>
+    <string name="content_desc_history">Icon for History action</string>
+    <string name="drawer_header_default_subtitle">Your truth companion</string>
 </resources>

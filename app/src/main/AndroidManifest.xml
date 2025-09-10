@@ -17,8 +17,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TruthNudge.M3"
-        >
+        android:name=".YourApplicationClass"
+        android:theme="@style/Theme.TruthNudge"
+        tools:ignore="MissingClass">
 
         <service
             android:name=".LinkNotificationListener"

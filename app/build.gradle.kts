@@ -1,4 +1,5 @@
 // Move imports to the top
+import org.gradle.kotlin.dsl.invoke
 import java.util.Properties
 
 plugins {
@@ -125,7 +126,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core) // Check alias
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
+// ... other dependencies
+    implementation("com.google.android.material:material:1.12.0")
+//
     // Checker Framework
     implementation("org.checkerframework:checker-qual:3.50.0")
     // REMOVE: implementation("com.google.android.gms:play-services-auth") // Redundant
@@ -136,5 +139,6 @@ dependencies {
 configurations.all {
     resolutionStrategy {
         force("org.checkerframework:checker-qual:3.50.0")
+        ("com.google.android.material:material:1.12.0")
     }
 }

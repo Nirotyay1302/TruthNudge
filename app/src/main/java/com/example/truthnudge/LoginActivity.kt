@@ -70,57 +70,80 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun signInWithGoogle() {
+        Log.e("LoginActivity_DEBUG", "!!!! signInWithGoogle() WAS DEFINITELY CALLED !!!!") // Temporary loud log
         binding.progress.isVisible = true
 
         val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
-            .setFilterByAuthorizedAccounts(false)
-            .setServerClientId(getString(R.string.default_web_client_id)) // Make sure this string resource exists
+            .setFilterByAuthorizedAccounts(false) // This is fine for testing
+            .setServerClientId(getString(R.string.default_web_client_id)) // CRITICAL
+            // .setNonce(YOUR_NONCE_IF_NEEDED) // Optional, for replay protection
+            // .setAutoSelectEnabled(false) // or true, influences one-tap behavior
             .build()
+
 
         val request: GetCredentialRequest = GetCredentialRequest.Builder()
             .addCredentialOption(googleIdOption)
             .build()
 
+        // In signInWithGoogle() method
         CoroutineScope(Dispatchers.Main).launch {
             try {
+                Log.d("LoginActivity", "Attempting credentialManager.getCredential...") // New Log
                 val result = credentialManager.getCredential(
                     request = request,
                     context = this@LoginActivity,
                 )
                 val credential = result.credential
+                Log.d("LoginActivity", "Credential received from manager.") // New Log
+
                 if (credential is GoogleIdTokenCredential) {
+                    Log.i("LoginActivity", "Credential IS GoogleIdTokenCredential.") // New Log
                     val googleIdToken = credential.idToken
                     firebaseAuthWithGoogle(googleIdToken)
                 } else {
-                    showError("Unexpected credential type")
+                    val actualType = credential?.javaClass?.name ?: "null"
+                    // THIS IS THE MOST IMPORTANT LOG FOR THIS SPECIFIC ERROR
+                    Log.e(
+                        "LoginActivity",
+                        "Unexpected credential type. Expected: GoogleIdTokenCredential, Got: $actualType"
+                    )
+                    showError("Google Sign-In failed: Unexpected credential type received ($actualType).") // Optionally add type to UI
                     binding.progress.isVisible = false
                 }
 
             } catch (e: GetCredentialException) {
-                Log.e("LoginActivity", "GetCredentialException: ${e.message}", e)
-                showError(e.message ?: "Google Sign-In failed")
+                // THIS IS ALSO VERY IMPORTANT
+                Log.e(
+                    "LoginActivity",
+                    "GetCredentialException type: ${e.type}, message: ${e.message}",
+                    e
+                )
+                showError("Google Sign-In Error (CredMan): ${e.type} - ${e.message}") // More detailed UI error
                 binding.progress.isVisible = false
-            } catch (e: Exception) {
-                Log.e("LoginActivity", "Google Sign-In Exception: ${e.message}", e)
+            } catch (e: Exception) { // Catch any other unexpected exceptions
+                Log.e("LoginActivity", "Google Sign-In - General Exception: ${e.message}", e)
                 showError(e.message ?: "An unexpected error occurred during Google Sign-In.")
                 binding.progress.isVisible = false
             }
         }
-    }
-
+        }
     private fun firebaseAuthWithGoogle(idToken: String) {
+        Log.d("LoginActivity", "Attempting Firebase auth with Google ID token: $idToken") // Log the token (for debugging only, can be sensitive)
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnSuccessListener {
+                Log.d("LoginActivity", "Firebase auth with Google SUCCESSFUL. User: ${it.user?.uid}")
                 goHome()
             }
-            .addOnFailureListener {
-                showError(it.localizedMessage ?: "Firebase auth with Google failed")
+            .addOnFailureListener { exception ->
+                Log.e("LoginActivity", "Firebase auth with Google FAILED", exception)
+                showError(exception.localizedMessage ?: "Firebase auth with Google failed")
             }
             .addOnCompleteListener {
                 binding.progress.isVisible = false
             }
     }
+
 
     private fun goHome() {
         startActivity(Intent(this, HomeActivity::class.java))

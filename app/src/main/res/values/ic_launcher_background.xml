@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ic_launcher_background">#A397B7</color>
+    <color name="ic_google_background">#A397B7</color>
+                <!-- ... other colors ... -->
+    <color name="background_light">#FFFBFE</color>
 </resources>

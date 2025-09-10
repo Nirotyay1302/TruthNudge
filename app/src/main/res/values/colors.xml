@@ -1,30 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="background">#FAFAFA</color>
-    <color name="colorPrimary">#4CAF50</color>
-    <color name="colorPrimaryVariant">#388E3C</color>
-    <color name="colorSecondary">#FFC107</color>
-    <color name="green">#4CAF50</color>
-    <color name="yellow">#FFC107</color>
-    <color name="red">#F44336</color>
-    <color name="verdict_true">#4CAF50</color>     <!-- Green -->
-    <color name="verdict_false">#F44336</color>    <!-- Red -->
+    <!-- Brand Colors -->
+    <color name="brand_primary">#4CAF50</color> <!-- Your Green -->
+    <color name="brand_primary_variant">#388E3C</color> <!-- Darker Green -->
+    <color name="brand_secondary">#FFC107</color> <!-- Your Yellow -->
+    <color name="brand_on_primary">#FFFFFF</color> <!-- Text/icons on primary -->
+    <color name="brand_on_secondary">#000000</color> <!-- Text/icons on secondary -->
+
+    <!-- Logo Specific Colors -->
+    <color name="logo_purple">#6A0DAD</color> <!-- !!! REPLACE with your actual logo's purple hex code !!! -->
+    <color name="logo_purple_text_on">#FFFFFF</color><!-- White text for good contrast on the purple -->
+    <color name="logo_purple_text_on_variant">#F0F0F0</color> <!-- A slightly off-white for secondary text -->
+
+    <!-- Specific UI Colors (Use sparingly, prefer theme attributes) -->
+    <color name="light_green_background">#E8F5E9</color>
+    <color name="light_green_on_background">#1B5E20</color>
+    <color name="verdict_true">#4CAF50</color>
+    <color name="verdict_false">#F44336</color>
     <color name="verdict_unknown">#FFC107</color>
-    <color name="primaryColor">#6200EE</color>
-    <color name="primaryLight">#BB86FC</color>
-    <color name="primaryDark">#3700B3</color>
-    <color name="background_light">#FFFFFF</color>
-    <color name="background_dark">#121212</color>
-    <color name="cardColor">#F2F2F2</color>
-    <!-- Amber -->
 
+    <!-- Material 3 Theme Colors (Light) -->
+    <color name="md_theme_light_primary">@color/brand_primary</color>
+    <color name="md_theme_light_onPrimary">@color/brand_on_primary</color>
+    <color name="md_theme_light_primaryContainer">#C8E6C9</color>
+    <color name="md_theme_light_onPrimaryContainer">#1B5E20</color>
+    <color name="md_theme_light_secondary">@color/brand_secondary</color>
+    <color name="md_theme_light_onSecondary">@color/brand_on_secondary</color>
+    <color name="md_theme_light_secondaryContainer">#FFECB3</color>
+    <color name="md_theme_light_onSecondaryContainer">#795548</color>
+    <color name="md_theme_light_tertiary">#03A9F4</color>
+    <color name="md_theme_light_onTertiary">#FFFFFF</color>
+    <color name="md_theme_light_tertiaryContainer">#B3E5FC</color>
+    <color name="md_theme_light_onTertiaryContainer">#01579B</color>
+    <color name="md_theme_light_error">#B00020</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    <color name="md_theme_light_errorContainer">#FDECEA</color>
+    <color name="md_theme_light_onErrorContainer">#B00020</color>
+    <color name="md_theme_light_background">#FFFBFE</color> <!-- Standard M3 light background -->
+    <color name="md_theme_light_onBackground">#1C1B1F</color> <!-- Standard M3 text on light background -->
+    <color name="md_theme_light_surface">#FFFBFE</color> <!-- Standard M3 light surface (for cards, toolbars etc.) -->
+    <color name="md_theme_light_onSurface">#1C1B1F</color> <!-- Standard M3 text on light surface -->
+    <color name="md_theme_light_surfaceVariant">#E7E0EC</color>
+    <color name="md_theme_light_onSurfaceVariant">#49454F</color>
+    <color name="md_theme_light_outline">#79747E</color>
+    <color name="md_theme_light_inverseSurface">#313033</color>
+    <color name="md_theme_light_inverseOnSurface">#F4EFF4</color>
+    <color name="md_theme_light_inversePrimary">#ADC6FF</color>
+    <color name="md_theme_light_surfaceTint">@color/md_theme_light_primary</color>
 
+    <!-- Base Definitions for Dark Theme Colors -->
+    <color name="md_theme_dark_primary">@color/md_theme_light_primary</color>
+    <color name="md_theme_dark_onPrimary">@color/md_theme_light_onPrimary</color>
+    <color name="md_theme_dark_primaryContainer">@color/md_theme_light_primaryContainer</color>
+    <color name="md_theme_dark_onPrimaryContainer">@color/md_theme_light_onPrimaryContainer</color>
+    <color name="md_theme_dark_secondary">@color/md_theme_light_secondary</color>
+    <color name="md_theme_dark_onSecondary">@color/md_theme_light_onSecondary</color>
+    <color name="md_theme_dark_secondaryContainer">@color/md_theme_light_secondaryContainer</color>
+    <color name="md_theme_dark_onSecondaryContainer">@color/md_theme_light_onSecondaryContainer</color>
+    <color name="md_theme_dark_tertiary">@color/md_theme_light_tertiary</color>
+    <color name="md_theme_dark_onTertiary">@color/md_theme_light_onTertiary</color>
+    <color name="md_theme_dark_tertiaryContainer">@color/md_theme_light_tertiaryContainer</color>
+    <color name="md_theme_dark_onTertiaryContainer">@color/md_theme_light_onTertiaryContainer</color>
+    <color name="md_theme_dark_error">@color/md_theme_light_error</color>
+    <color name="md_theme_dark_onError">@color/md_theme_light_onError</color>
+    <color name="md_theme_dark_errorContainer">@color/md_theme_light_errorContainer</color>
+    <color name="md_theme_dark_onErrorContainer">@color/md_theme_light_onErrorContainer</color>
+    <color name="md_theme_dark_background">#121212</color>
+    <color name="md_theme_dark_onBackground">#E0E0E0</color>
+    <color name="md_theme_dark_surface">#1E1E1E</color> <!-- Standard M3 dark surface (for cards, toolbars etc.) -->
+    <color name="md_theme_dark_onSurface">#E0E0E0</color> <!-- Standard M3 text on dark surface -->
+    <color name="md_theme_dark_surfaceVariant">#424242</color>
+    <color name="md_theme_dark_onSurfaceVariant">#BDBDBD</color>
+    <color name="md_theme_dark_outline">#757575</color>
+    <color name="md_theme_dark_inverseSurface">@color/md_theme_light_surface</color>
+    <color name="md_theme_dark_inverseOnSurface">@color/md_theme_light_onSurface</color>
+    <color name="md_theme_dark_inversePrimary">@color/md_theme_light_primary</color>
+    <color name="md_theme_dark_surfaceTint">@color/md_theme_dark_primary</color>
 
+    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_500">#FF6200EE</color>
 </resources>

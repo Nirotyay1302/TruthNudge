@@ -3,52 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/logo_purple"
     android:gravity="center"
-    android:background="@drawable/bg_gradient"
+    android:orientation="vertical"
     android:padding="24dp">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/ivAppLogoLogin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/app_logo_description"
+        android:src="@drawable/truthnudge_logo"
+        android:scaleType="fitCenter" />
 
     <!-- Title -->
     <TextView
         android:id="@+id/tvTitle"
+        style="@style/TextAppearance.Material3.HeadlineSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:text="Welcome Back 👋"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:paddingBottom="24dp" />
+        android:textColor="@color/logo_purple_text_on" />
 
     <!-- Card -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
-        app:strokeWidth="1dp"
-        app:strokeColor="@color/black">
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:strokeWidth="0dp">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:showDividers="middle"
-            android:divider="?attr/dividerHorizontal"
-            android:dividerPadding="16dp">
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <!-- Email -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email">
+                android:layout_marginBottom="16dp"
+                android:hint="Email"
+                app:hintTextColor="?attr/colorOnSurfaceVariant">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEmail"
-                    android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="?attr/colorOnSurface"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Password -->
@@ -56,14 +65,16 @@
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password">
+                android:layout_marginBottom="24dp"
+                android:hint="Password"
+                app:hintTextColor="?attr/colorOnSurfaceVariant">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:rotationX="-3" />
+                    android:textColor="?attr/colorOnSurface"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Login Button -->
@@ -72,20 +83,20 @@
                 style="@style/Widget.Material3.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"/>
-
-            
-
+                android:layout_marginBottom="8dp"
+                android:text="Login" />
 
             <!-- Progress Indicator -->
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progress"
+                style="@style/Widget.Material3.CircularProgressIndicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
                 android:visibility="gone"
-                app:indicatorSize="40dp"
-                style="@style/Widget.Material3.CircularProgressIndicator" />
+                app:indicatorColor="?attr/colorPrimary"
+                app:indicatorSize="40dp" />
 
             <!-- Google Sign-In -->
             <com.google.android.material.button.MaterialButton
@@ -93,24 +104,24 @@
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
                 android:text="Continue with Google"
-                app:icon="@mipmap/ic_google"
+                app:icon="@drawable/googleg_standard_color_18"
                 app:iconGravity="textStart"
                 app:iconPadding="12dp"
-                android:layout_marginTop="12dp" />
+                app:iconTint="@null" />
 
             <!-- Link to Signup -->
             <TextView
                 android:id="@+id/tvGoSignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="Don’t have an account? Sign up"
                 android:textAppearance="?attr/textAppearanceBodyMedium"
-                android:paddingTop="16dp"
-                android:gravity="center"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/black" />
+                android:textColor="?attr/colorPrimary" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
+
