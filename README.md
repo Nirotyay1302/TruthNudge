@@ -45,6 +45,7 @@ TruthNudge/
 📲 Download APK
 
 👉 Download Latest Release
+https://github.com/Nirotyay1302/TruthNudge/releases
 
 🛠 Future Roadmap
 
