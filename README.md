@@ -4,6 +4,12 @@ TruthNudge is an AI-powered mobile application designed to **detect potential mi
 It empowers users to evaluate the trustworthiness of news, articles, and social media posts by leveraging Natural Language Processing (NLP) and Machine Learning models.
 
 ---
+![License](https://img.shields.io/badge/License-MIT-green.svg)  
+![Release](https://img.shields.io/github/v/Nirotyay1302/TruthNudge/release)  
+![Build](https://img.shields.io/badge/Build-Android%20Studio-blue)  
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)
+
+---
 
 ## 🚀 Features
 - 🔍 **Fake News Detection** – Analyze text and flag potential misinformation.  
@@ -11,6 +17,16 @@ It empowers users to evaluate the trustworthiness of news, articles, and social 
 - 📱 **User-Friendly Interface** – Clean and intuitive design for smooth navigation.  
 - 🌐 **Educational Insights** – Tips & guidelines to identify trustworthy sources.  
 - 🧠 **AI-Powered Analysis** – Lightweight NLP model embedded for real-time use.  
+
+---
+
+## 📸 Screenshots & Demo
+
+<p align="center">
+  <img src="screenshots/home_screen.png" alt="Home Screen" width="250"/>
+  <img src="screenshots/history_screen.png" alt="Analysis History" width="250"/>
+  <img src="screenshots/check claim_screen.png" alt="Analysis links" width="250"/>
+</p>
 
 ---
 
@@ -58,6 +74,10 @@ https://github.com/Nirotyay1302/TruthNudge/releases
 👥 Community-driven reporting system.
 
 ☁️ Cloud integration for large-scale analysis.
+
+📜 License
+
+This project is licensed under the MIT License
 
 👨‍💻 Contributors
 
