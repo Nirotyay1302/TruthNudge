@@ -20,4 +20,5 @@
     <string name="content_desc_check_claim">Icon for Check Claim action</string>
     <string name="content_desc_history">Icon for History action</string>
     <string name="drawer_header_default_subtitle">Your truth companion</string>
+    <string name="no_history_yet">No history yet.</string>
 </resources>

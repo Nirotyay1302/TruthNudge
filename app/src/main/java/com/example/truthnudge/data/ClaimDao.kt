@@ -19,6 +19,11 @@ interface ClaimDao {
     // Mini history preview (last N claims)
     @Query("SELECT * FROM claims ORDER BY timestamp DESC LIMIT :limit")
     suspend fun getLastNClaims(limit: Int): List<Claim>
+
     @Delete
     suspend fun deleteClaim(claim: Claim)
+
+    // ADDED THIS FUNCTION
+    @Query("SELECT * FROM claims WHERE id = :claimId LIMIT 1")
+    suspend fun getClaimById(claimId: Long): Claim? // Use Long for claimId
 }

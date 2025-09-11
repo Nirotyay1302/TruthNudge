@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".HistoryActivity">
 
-    <ScrollView
-        android:id="@+id/historyRecycler"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"> <!-- Initially hidden -->
+        android:visibility="gone"
+        tools:listitem="@layout/item_claim" />
+    <!-- XML Comments should be outside the tag's attribute list or on a new line after the tag is closed -->
+    <!-- Changed ID -->
+    <!-- Initially hidden, shown if data exists -->
+    <!-- Good for previewing item layout -->
 
-        <LinearLayout
-            android:id="@+id/historyContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-    </ScrollView>
 
     <TextView
         android:id="@+id/emptyHistoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No history yet."
+        android:text="@string/no_history_yet"
         android:textSize="18sp"
         android:layout_centerInParent="true"
-        android:visibility="gone" /> <!-- Initially hidden -->
+        android:visibility="visible" /> <!-- All attributes are now inside the TextView tag, and it's self-closed -->
 
 </RelativeLayout>
