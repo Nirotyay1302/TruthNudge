@@ -6,6 +6,7 @@ It empowers users to evaluate the trustworthiness of news, articles, and social 
 ---
 
 <p align="center">  
+  
   ![License](https://img.shields.io/badge/License-MIT-green.svg)  ![Release](https://img.shields.io/github/v/release/Nirotyay1302/TruthNudge) ![Build](https://img.shields.io/badge/Build-Android%20Studio-blue) ![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange)
 </p>
 
