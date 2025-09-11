@@ -35,7 +35,7 @@ TruthNudge/
 ## 📦 Installation & Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/TruthNudge.git
+   git clone https://github.com/Nirotyay1302/TruthNudge.git
    cd TruthNudge
 2. Open the project in Android Studio.
 3. Sync Gradle and let dependencies resolve.
